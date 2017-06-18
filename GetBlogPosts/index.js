@@ -1,6 +1,5 @@
 module.exports = function (context, req) {
 
-  require('./Shared/mongoConfig.js');
   var mongoose = require('mongoose');
 
   var uri = 'mongodb://dougajmcdonald:SeatCupra51@ds056559.mlab.com:56559/dougmcdonald';
