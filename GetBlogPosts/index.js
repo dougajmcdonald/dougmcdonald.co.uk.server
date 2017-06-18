@@ -1,7 +1,7 @@
 module.exports = function (context, req) {
 
   var mongoose = require('mongoose');
-  var blogPostModel = require('./blogPostModel.js');
+  var blogPostModel = require('../Shared/blogPostModel.js');
 
   var uri = 'mongodb://dougajmcdonald:SeatCupra51@ds056559.mlab.com:56559/dougmcdonald';
   var db = mongoose.connect(uri);
