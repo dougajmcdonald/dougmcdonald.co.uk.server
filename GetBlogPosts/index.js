@@ -15,7 +15,7 @@ module.exports = function (context, req) {
 //   var BlogPost = mongoose.model('BlogPost', blogPostSchema);
 
   BlogPost.find({}).then(function(data) {
-    context.res.body(data);
+    context.res.body(JSON.stringify(data));
   });
 
 
