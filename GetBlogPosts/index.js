@@ -6,17 +6,11 @@ module.exports = function (context, req) {
   var uri = 'mongodb://dougajmcdonald:SeatCupra51@ds056559.mlab.com:56559/dougmcdonald';
   var db = mongoose.connect(uri);
 
-//   var blogPostSchema = new mongoose.Schema({
-//     id: 'number',
-//     title: 'string',
-//     date: 'date',
-//     content: 'string'
-//   });
-
-//   var BlogPost = mongoose.model('BlogPost', blogPostSchema);
-
   blogPostModel.find({}).then(function(data) {
-    context.res.body(JSON.stringify(data));
+    context.res = {
+        body: JSON.stringify(data)
+    };
+    context.done();
   });
 
 
@@ -32,5 +26,5 @@ module.exports = function (context, req) {
     //         body: "Please pass a name on the query string or in the request body"
     //     };
     // }
-  context.done();
+
 };
