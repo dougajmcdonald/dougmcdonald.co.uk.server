@@ -1,6 +1,6 @@
 module.exports = function (context, req) {
 
-    import './Shared/mongoConfig.js';
+    require('./Shared/mongoConfig.js');
     var mongoose = require('mongoose');
 
     var tags = [{
