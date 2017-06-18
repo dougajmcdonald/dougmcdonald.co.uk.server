@@ -1,5 +1,7 @@
 module.exports = function (context, req) {
 
+    var mongoose = require('mongoose');
+
     context.log('JavaScript HTTP trigger function processed a request.');
 
 var tags = [{
